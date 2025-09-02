@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lore Olympus</title>
+  <link rel="icon" type="image/x-icon" href="lore-olympus.ico">
+  <link rel="stylesheet" href="style.css" />
+ 
+  <script defer src="https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js"></script>
+
+</head>
+<body>
+  <header>
+    <h1>Lore Olympus — Arbre des relations (Tome 1)</h1>
+    <span class="badge">prototype interactif</span>
+  </header>
+
+  <main>
+    <div id="cy" role="application" aria-label="Graphe des relations"></div>
+    <aside>
+      <h2 class="panel-title">Détails du personnage</h2>
+      <p class="small">Clique sur un nœud pour sa fiche. Survole un lien pour le type de relation.</p>
+        
+    <label for="tome-select">Choisir le tome :</label>
+    <select id="tome-select">
+  <option value="1">Tome 1</option>
+  <option value="2">Tome 2</option>
+    </select>
+
+      <div class="legend">
+        <span class="chip"><span class="dot romantique"></span>romantique</span>
+        <span class="chip"><span class="dot amitie"></span>amitié</span>
+        <span class="chip"><span class="dot pouvoir"></span>pouvoir</span>
+        <span class="chip"><span class="dot conflit"></span>conflit</span>
+        <span class="chip"><span class="dot alliance"></span>alliance</span>
+      </div>
+
+      <div class="divider"></div>
+
+      <div id="sheet" class="card">
+        <strong class="mono">Sélection :</strong>
+        <div id="sheet-content" class="small">Aucun personnage sélectionné.</div>
+      </div>
+
+      <div class="controls">
+        <button id="reset">Réinitialiser vue</button>
+        <button id="layout">Réorganiser</button>
+        <button id="export">Exporter PNG</button>
+      </div>
+    </aside>
+  </main>
+
+  <footer>
+    <small>Prototype fanmade pour carnet personnel.</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
